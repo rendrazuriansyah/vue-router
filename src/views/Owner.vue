@@ -9,11 +9,12 @@ const { owner } = products.find(
 </script>
 
 <template>
-	<div>
+	<div v-if="owner">
 		<div>
 			<h1>Owner</h1>
 			<p>{{ owner.name }}</p>
 			<p>{{ owner.email }}</p>
 		</div>
 	</div>
+	<div v-else>Product Not Found</div>
 </template>
